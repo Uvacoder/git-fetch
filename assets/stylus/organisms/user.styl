@@ -1,0 +1,94 @@
+.user
+  display flex
+  flex-wrap wrap
+  align-items center
+  position relative
+  padding rem(25)
+  margin-top rem(15)
+  margin-bottom rem(30)
+  box-shadow $shadow
+  border-radius rem(10)
+  +below(m)
+    flex-direction column
+
+  &--vertical
+    flex-direction column
+    flex 1
+    +below(m)
+      width 100%
+
+  &__link
+    position absolute
+    top -30px
+
+    &--internal
+      left 0
+      transform translateX(20px)
+
+    &--external
+      right 0
+      transform translateX(-20px)
+
+  &__image
+    display flex
+    flex-direction column
+    margin-right rem(25)
+    +below(m)
+      margin-right 0
+      margin-bottom rem(25)
+
+    ~/--vertical &
+      margin-right 0
+
+    img
+      width 150px
+      height 150px
+      margin rem(15)
+      box-shadow $elevation
+      border-radius 50%
+      overflow hidden
+
+  &__info
+    flex 1
+    display flex
+    flex-wrap wrap
+    +below(m)
+      width 100%
+      flex-direction column
+
+    ~/--vertical &
+      width 100%
+      flex-direction column
+      margin-top rem(20)
+
+      &__contact
+        margin-top rem(20)
+
+    &__personal
+      flex 1
+      margin-right rem(25)
+      +below(m)
+        flex auto
+
+    &__contact
+      +below(m)
+        margin-top rem(20)
+
+      &__item  
+        margin rem(5 0)
+      
+        span:not(.icon)
+          width calc(100% - 55px)
+          display inline-block
+          position relative
+          white-space nowrap
+          overflow hidden
+          +below(m)
+            &:after
+              content ''
+              width 20%
+              height 100%
+              position absolute
+              top 0
+              right 0
+              background-image linear-gradient(to right, rgba($primary, 0), $primary)

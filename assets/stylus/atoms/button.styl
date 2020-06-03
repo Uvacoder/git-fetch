@@ -1,0 +1,42 @@
+.button
+  height 40px
+  padding rem(0 15)
+  background-color $primary
+  box-shadow $elevation
+  border-radius rem(10)
+  @extend .roboto
+  font-size rem(12)
+  font-weight 900
+  text-transform uppercase
+  white-space nowrap
+  cursor pointer
+  transition box-shadow 0.2s ease-out, transform 0.1s ease-in, background-color 0.1s ease-out, color 0.2s ease-in
+
+  &:not(&--disabled):hover
+    box-shadow $shadow
+    transform scale(1.1)
+
+  &--round
+    width 40px
+    height 40px
+    border-radius 50%
+    padding 0
+
+  &--filled
+    background-color $green
+    color $white
+
+    &:hover
+      background-color $red
+
+  &--large
+    width 60px
+    height 60px
+    margin-right rem(15)
+    font-size rem(20)
+
+  &--no-margin
+    margin 0
+
+  &--disabled
+    cursor default

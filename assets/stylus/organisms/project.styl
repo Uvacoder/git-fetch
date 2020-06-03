@@ -1,0 +1,29 @@
+.project
+  flex 2
+  position relative
+  padding rem(20)
+  margin rem(15 30 30 0)
+  box-shadow $shadow
+  border-radius rem(10)
+  +below(m)
+    width 100%
+    padding rem(45 20 20)
+    margin rem(15 0 30)
+
+  &__link
+    position absolute
+    top -30px
+    right 0
+    transform translateX(-20px)
+
+  &__wrapper
+    display flex
+    align-items flex-start
+    +below(m)
+      flex-direction column
+
+    .placeholders--project
+      flex 2
+
+    .placeholders--user
+      flex 1

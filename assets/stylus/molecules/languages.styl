@@ -1,0 +1,37 @@
+.languages
+  margin rem(20 0)
+
+  &__list
+    height 10px
+    display flex
+    margin-bottom rem(10)
+    border-radius rem(10)
+    overflow hidden
+
+    &__item
+      height 100%
+
+  &__names
+    display flex
+    flex-wrap wrap
+    align-items center
+    justify-content space-between
+    margin rem(0 -5)
+
+    &__item
+      display flex
+      align-items center
+      padding rem(0 5)
+      margin-bottom rem(5)
+      @extend .roboto
+      font-size rem(12)
+
+      strong
+        margin-left (5px)
+        color $terciary
+
+    &__icon
+      width 10px
+      height 10px
+      margin-right rem(8)
+      border-radius 50%
